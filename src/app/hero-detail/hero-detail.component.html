@@ -1,0 +1,28 @@
+<div *ngIf="hero">
+  <div class="her">
+  <h2>{{ hero.name | uppercase }} Details</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <div>
+    <label>Name:
+      <input [(ngModel)]="hero.name" placeholder="Name"/>
+    </label>
+  </div>
+  <div>
+    <label>Description:
+      <textarea [(ngModel)]="hero.description" placeholder="Description" cols="70" rows="5"></textarea>
+    </label>
+  </div>
+  <div>
+    <label>Power:
+      <textarea [(ngModel)]="hero.power" placeholder="Power" cols="70" rows="5"></textarea>
+    </label>
+  </div>
+  <div>
+    <label>Weakness:
+      <textarea [(ngModel)]="hero.weakness" placeholder="Weakness" cols="70" rows="5"></textarea>
+    </label>
+  </div>
+  <button (click)="goBack()" class="but">Go back</button>
+  <button (click)="save()" class="but">Save</button>
+</div>
+</div>

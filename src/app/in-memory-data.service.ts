@@ -1,0 +1,58 @@
+import { InMemoryDbService } from 'angular-in-memory-web-api';
+
+export class InMemoryDataService implements InMemoryDbService {
+  createDb() {
+    const heroes = [
+      { id: 1, name: 'Spiderman',description:`Iron Man is a fictional superhero appearing in American comic books published by Marvel Comics. The character was created by writer and editor Stan Lee, developed by scripter Larry Lieber, and designed by artists Don Heck and Jack Kirby. The character made his first appearance in Tales of Suspense #39 (cover dated March 1963).
+
+      A wealthy American business magnate, playboy, and ingenious scientist, Anthony Edward "Tony" Stark suffers a severe chest injury during a kidnapping. When his captors attempt to force him to build a weapon of mass destruction, he instead creates a powered suit of armor to save his life and escape captivity. Later, Stark develops his suit, adding weapons and other technological devices he designed through his company, Stark Industries. He uses the suit and successive versions to protect the world as Iron Man. Although at first concealing his true identity, Stark eventually declared that he was, in fact, Iron Man in a public announcement.
+      
+      Initially, Iron Man was a vehicle for Stan Lee to explore Cold War themes, particularly the role`, 
+      power:`This power is nothing short of controversial, but when it comes down to it, it’s also one of the more useful abilities that Spider-Man has ever had. Most famously portrayed in the Sam Raimi Spider-Man trilogy, Peter Parker’s organic webbing replaced his original hand-made mechanical web shooters. With this new power – which has also been featured in the Disassembled comic storyline – Spider-Man is able to internally produce web-fluid and organically shoot it out of his own wrists. This webbing is often shown to be stronger and more robust than his traditional, homemade web-fluid.`,
+      weakness:`Anti-Venom is basically the Oxiclean of Venoms. Got some Venom on your shirt? He'll have that Symbiote cleaned right up. Only problem is that the same goes for Spider-Man's powers. For those who don't know, Anti-Venom was a new type of Symbiote linked solely within Eddie Brock. Imagine Mr. Clean, only with a longer tongue. It was created when the remnants left in Brock's bloodstream from the original Venom Symbiote began combining with his white blood cells, forming an all new breed. Notably, Anti-Venom contained powerful healing powers that could cure any known disease, eradicate other Symbiotes, and remove impurities within the human body -- such as radioactive spider blood.
+      ` },
+      { id: 2, name: 'Thor' ,description:`Thor is a 2011 American superhero film based on the Marvel Comics character of the same name, produced by Marvel Studios and distributed by Paramount Pictures.[N 1] It is the fourth film in the Marvel Cinematic Universe (MCU). The film was directed by Kenneth Branagh, written by the writing team of Ashley Edward Miller and Zack Stentz along with Don Payne, and stars Chris Hemsworth as the title character, alongside Natalie Portman, Tom Hiddleston, Stellan Skarsgård, Colm Feore, Ray Stevenson, Idris Elba, Kat Dennings, Rene Russo, and Anthony Hopkins. The film sees Thor banished to Earth from Asgard, stripped of his powers and his hammer Mjölnir, after reigniting a dormant war. As his brother Loki plots to take the Asgardian throne, Thor must prove himself worthy.
+
+      Sam Raimi first developed the concept of a film adaptation of Thor in 1991, but soon abandoned the project, leaving it in "development hell" for several years. During this time, the rights were picked up by various film studios until Marvel signed Mark Protosevich to develop the project in 2006, and planned to finance it and release it through Paramount. Matthew Vaughn was originally assigned to direct the film for a tentative 2010 release. However, after Vaughn was released from his holding deal in 2008, Branagh was approached and the film's release was rescheduled to 2011. The main characters were cast in 2009, and principal photography took place in California and New Mexico from January to May 2010. The film was converted to 3D in post-production.
+      `, power:`Thus far, this includes Thor, Odin, Tiwaz, Red Norvell, and Beta Ray Bill. Those who are worthy enough are empowered with Thor's essence held within Mjolnir to gain the powers of Thor. However, in times of need, Thor can will others to lift Mjolnir and overcome this enchantment, allowing them to lift the hammer.
+      `,
+      weakness:`Thor may be an Asgardian, but he certainly does have his problems and weaknesses. His biggest strength is also his greatest weakness: Mjolnir. In a series of events, Mjolnir and Thor's “lifeforces” became one (“Thor Complete Powers”). Due to that process, Mjolnir can respond to nearly every will of Thor's.
+      `},
+      { id: 3, name: 'Krrish' ,
+       description:`Krrish ([ˈkrɪʃ]) is a 2006 Indian superhero film directed, produced, and written by Rakesh Roshan, and starring Hrithik Roshan, Priyanka Chopra, Rekha and Naseeruddin Shah. It is the second film in the Krrish series, being the sequel to Koi... Mil Gaya, and relates the story of Krishna, the son of the previous film's protagonists, who inherits his father's superhuman abilities. After falling in love with Priya, he follows her to Singapore, where he takes on the persona of "Krrish" to keep his identity secret while saving children from a burning circus. From that moment on he is regarded as a superhero, and must later thwart the plans of the evil Dr. Siddhant, who has a connection to Krishna's father, Rohit, the protagonist of the previous film.
+
+       Krrish was conceived to be a film of global significance and a trendsetter in Indian cinema, with visual effects on par with those from Hollywood. To that end, the effects team was aided by Hollywood's Marc Kolbe and Craig Mumma, and the stunts were choreographed by Chinese martial arts film expert Tony Ching. The music was composed by Rajesh Roshan, with the background score by Salim-Sulaiman. Filming was done to a large extent in Singapore as well as India.
+       
+       The film was released worldwide on 23 June 2006 at a budget of ₹450 million and on 1000 prints, both near-record amounts for an Indian film at the time. Krrish received mixed reviews from critics in India, but got a record opening week at the box office. A blockbuster, Krrish grossed a worldwide total of ₹1.17 billion, becoming the second highest earning Indian film of 2006.
+       `, 
+       power:`Krrish possesses superhuman strength, superhuman speed, stamina, endurance and durability, longevity, peak physical and mental conditioning, immunity to diseases and viruses and has superhuman abilities to run, swim, jump and leap at a superhuman speed and to a great extent. Krrish is so fast that he even outran a horse; this indicates he can at least run up to 50 miles at the very least
+       Has a vast leaping ability. His vast leaping ability has not been defined yet but if estimated then he can leap 1/8 of a mile [201 meters]; hurdle a twenty-story building like the Golden Age Superman or even more than that.
+       Has the ability to communicate with animals.
+       He has special abilities related to nature. "Climbing, Fishing, Running and Jumping" unusually complete his special abilities.
+       He has excellent observational skills that allows him to learn, adapt and improvise whatever he sees, hears or reads within few seconds. He also possesses enhanced mental processes, including an eidetic memory.
+       Master in martial arts and hand-to-hand combat
+       He developed telekinesis in Krrish 3 because of Rohits transferred energy and using it, he was able to fly at supersonic speeds.
+             `,
+       weakness:`His dad & wife.` },
+      { id: 4, name: 'Iron Man' ,description:`Iron Man is a fictional superhero appearing in American comic books published by Marvel Comics. The character was created by writer and editor Stan Lee, developed by scripter Larry Lieber, and designed by artists Don Heck and Jack Kirby. The character made his first appearance in Tales of Suspense #39 (cover dated March 1963).
+
+      A wealthy American business magnate, playboy, and ingenious scientist, Anthony Edward "Tony" Stark suffers a severe chest injury during a kidnapping. When his captors attempt to force him to build a weapon of mass destruction, he instead creates a powered suit of armor to save his life and escape captivity. Later, Stark develops his suit, adding weapons and other technological devices he designed through his company, Stark Industries. He uses the suit and successive versions to protect the world as Iron Man. Although at first concealing his true identity, Stark eventually declared that he was, in fact, Iron Man in a public announcement.
+      
+      Initially, Iron Man was a vehicle for Stan Lee to explore Cold War themes, particularly the role of American technology and industry in the fight against communism.[1] Subsequent re-imaginings of Iron Man have transitioned from Cold War motifs to contemporary matters of the time.[1]
+      `,
+       power:`Although Tony Stark doesn't have any super powers, he is an incredibly good engineer. Iron Man is Tony Stark's creation. It's a special suit that gives Stark superhuman strength, the ability to fly and powerful weapons.
+       `,
+       weakness:`'Iron Man 3' Movie: The Greatest Weaknesses Of Our Greatest "Super" Heroes. With the release of Iron Man 3, protagonist Tony Stark once again has to deal with the matters of the heart, or a potentially fatal physical condition that can kill him instantly.
+       `},
+      { id: 5, name: 'Captain America' ,description:`Captain America is a fictional superhero appearing in American comic books published by Marvel Comics. Created by cartoonists Joe Simon and Jack Kirby, the character first appeared in Captain America Comics #1 (cover dated March 1941) from Timely Comics, a predecessor of Marvel Comics. Captain America was designed as a patriotic supersoldier who often fought the Axis powers of World War II and was Timely Comics' most popular character during the wartime period. The popularity of superheroes waned following the war and the Captain America comic book was discontinued in 1950, with a short-lived revival in 1953. Since Marvel Comics revived the character in 1964, Captain America has remained in publication.
+
+      The character wears a costume bearing an American flag motif, and he utilizes a nearly indestructible shield which he throws as a projectile. Captain America is the alter ego of Steve Rogers, a frail young man enhanced to the peak of human perfection by an experimental serum to aid the United States government's efforts in World War II. Near the end of the war, he was trapped in ice and survived in suspended animation until he was revived in the present day. Although Captain America often struggles to maintain his ideals as a man out of his time with its modern realities, he remains a highly respected figure in his community which includes becoming the long-time leader of the Avengers.
+      `,
+       power:`Captain America has agility, strength, speed, endurance, and reaction time superior to any Olympic athlete who ever competed. The Super-Soldier formula that he has metabolized has enhanced all of his bodily functions to the peak of human efficiency.
+       `,
+       weakness:`Captain America's weakness, quite simply is his ability to get mortally wounded. When under the effects of the Super Soldier Serum, Cap gets to function at "peak human healing".
+       `}
+    ];
+    return {heroes};
+  }
+}
